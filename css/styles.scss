@@ -1,0 +1,156 @@
+//COLORS
+$grey-light: #CCCCCC;
+$accent: #FFCB5B;
+$primary: #242814;
+$font-grey: #222222;
+
+//FONT-STACKS
+$sans-font: 'Montserrat',
+sans-serif;
+$serif-font: 'Esteban',
+serif;
+
+$container-width: 80%;
+$bottom-margin: 3em;
+
+
+
+//RESET
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $grey-light;
+    font-family: $sans-font;
+    color: $primary;
+}
+
+section {
+    margin-bottom: $bottom-margin;
+}
+
+a {
+    color: $primary;
+}
+
+h1 {
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+header {
+    background-color: $accent;
+    color: $primary;
+    margin-bottom: $bottom-margin;
+    ;
+    // background-image: url(../img/header_bg.jpg);
+    // background-size: cover;
+    // background-position: center;
+
+    .header-container {
+        display: flex;
+        margin: 0 auto;
+        width: $container-width;
+        height: 800px;
+
+        // background-image: url(../img/header_bg.jpg);
+        // background-size: cover;
+        // background-position: center;
+    }
+
+    .header-col {
+        flex: 1;
+        // background-color: #CCCCCC;
+        margin: 1em;
+    }
+
+    .logo {
+        height: 5em;
+    }
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.5em;
+    text-align: end;
+
+    ul {
+        list-style: none;
+
+        a {
+            text-transform: uppercase;
+            letter-spacing: .001em;
+            transition: all .1s ease-in;
+
+            &:hover {
+                letter-spacing: .03em;
+                color: lighten($color: $primary, $amount: 20);
+            }
+        }
+    }
+
+    .row {
+        border: 5px solid darken($color: $grey-light, $amount: 5);
+    }
+
+    .row-5 {
+        flex: 5;
+        margin: 0 auto;
+    }
+
+    .row-1 {
+        flex: 1;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+
+        .arrow-down {
+            height: 1.5em;
+        }
+    }
+}
+
+//FULLSTACK
+
+.fullstack-container {
+    background-color: white;
+
+    article {
+        background-color: white;
+        width: $container-width;
+        margin: 0 auto;
+    }
+}
+
+//ABOUT ME
+.about-container {
+    width: $container-width;
+    margin: 0 auto;
+
+    p {
+        font-family: $serif-font;
+        font-size: 26px;
+        margin-bottom: 1em;
+    }
+
+    .cv {
+        margin: 0 auto;
+        width: 100%;
+        height: 800px;
+    }
+}
+
+//CONTACT
+.contact-container {
+    background-color: white;
+
+    aside {
+        width: $container-width;
+        margin: 0 auto;
+    }
+}

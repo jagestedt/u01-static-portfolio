@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="sv-se">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="description" content="Samuel Jägestedt" />
+    <meta name="author" content="Samuel Jägestedt" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Samuel Jägestedt</title>
+    <link href="./css/stylesheet.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/css2?family=Esteban&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <div class="headerleft">
+                <div class="logo">
+                    <a href="./index.html"><img src="./img/logo.png" alt="SJ-logotyp"></a>
+                </div>
+            </div>
+            <div class="headerright">
+                <nav>
+                    <ul>
+                        <li><a href="./index.html">Hem</a></li>
+                        <li><a href="./contact.html">Kontakt</a></li>
+                        <li><a href="./processanalysis.html">Processanalys</a></li>
+                    </ul>
+                </nav>
+                <div class="headertext">
+                    <ul>
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Design</li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!--END HEADER-->
+
+        <main class="processanalysis">
+            <img src="./img/processanalys.png" alt="processanalys-bild" />
+            <h1>Processanalys</h1>
+
+            <h2>HTML</h2>
+            <p>
+                Jag började med att märka upp sidan med HTML5, som jag har använt mig av under hela kursen. Den främsta anledningen att jag märker med HTML5 är de nya elementen vilket underlättar översikten för mig som nybörjare. I video-genomgångar producerade innan HTML5 kommit så blev jag vilsen bland alla div-taggar. Att få sätta header- och footer-taggar på sidhuvud respektive sidfot och en nav-tagg kring menyn jag använder för att just navigera, gör det tydligare att överblicka. Div-taggarna får istället sparas till speciella element. HTML5 är rekommenderad enligt W3C.org sedan slutet av 2014 och räknas användas i många år framöver (Jacobs, 2014), så det kändes också bra att hoppa på det tåget direkt.</p>
+            <p>
+                Som nämnt så är vissa taggar självklara, men när jag märkte upp min sida som mestadels består av Lorem ipsum-text så blir det otydligare. Jag valde i alla fall att sätta en main-tagg på mittenkolumnen med bild på mig. En central placering i desktop och överst när sidan skalar ner tyckte jag tydde på att det var huvudinnehållet. Lorem ipsum och engelska lånord gör det också lite knivigt med lang-attributet, men texten jag skrivit själv är på svenska, så jag valde ”sv-se”.</p>
+            <p>
+                För att sidan ska visas anpassad till webbläsarens fönster så har jag använt den rekommenderade (W3CSchools) meta-taggen: meta name="viewport" content="width=device-width, initial-scale=1.0", som också laddar sidan rätt zoomad.</p>
+            <p>
+                I html-koden är allting är allting uppmärkt efter mockupen som föreslogs. Ett sidhuvud med logotyp-bild, navigation och lite text i. Jag följde Patrik Bernhardssons videogenomgång och byggde en meny (för navigation) med hjälp av en ul-tagg (2017). Till en början fanns även sidhuvudets bakgrund som en img-tagg, men jag åter kommer till det i css-delen.</p>
+            <p>
+                På det följer de tre kolumnerna uppifrån och ner, från vänster till höger, med en main i mitten. De andra två fick vara div-taggar med klassnamn (left/right). Bilderna har jag lag in med img-tagg för att kunna sätta alt-attribut som beskriver, för t.ex. skärmläsare, vad de föreställer.</p>
+            <p>
+                En h2-tagg som rubrik för följande stycke och eftersom det saknas ett element för ingress så satte jag en h3-tagg, som jag anpassade i css. Avslutningsvis en sidfot med en img-tagg som fyller ut innan allt stängs.</p>
+
+            <h2>CSS</h2>
+            <p>
+                Först lade jag till Eric Meyers CSS-reset (Meyer) för att nollställa eventuella webbläsargrundstilar. Fortsättningsvis följde jag rådet att sätta ”height: 100%” på html-taggen för att slippa problem med dold en scrollnings-list (Bernhardsson, 2014). satte jag en grundstil på body-taggen (t.ex. bakgrundsfärg och grundläggande typografi). Sen dit med en enkel wrapper/container för att hålla innehållet på plats i mitten av sidan.</p>
+            <p>
+                Jag hade stilat upp desktop-versionen med float, när en kompis som jobbar med webbutveckling tipsade om att jag borde använda flexbox och länkade ett mycket pedagogiskt spel (https://flexboxfroggy.com/#sv). Jag läste vidare om flexbox (CSS-tricks, 2019) och tyckte att det såg ganska intuitivt ut speciellt när man man skalar av designen till bara boxar i planeringen och kodningen.</p>
+            <p>
+                Nu till bakgrundsbilden i sidhuvudet. Jag hade lyckats koda med float så att sidan skalade ganska snyggt utan media queries ner till i närheten av mobilskärmar. Men när jag skulle ge mig på media queries så hade jag börjat komma in på flexbox-metoden. Därför kodade jag om header-taggen (några extra div-taggar) för det. Hela sidhuvudet blir en flex-container och i den ligger två barn som delar på utrymmet vertikalt. För att följa mockupen lade logotypen i det vänstra barnet och navigationsmenyn och en lista i det högra. Det högra barnet fick också bli en flex container med där innehållet delades upp längs en horisontell linje.</p>
+            <p>
+                Vidare till kolumnerna (.boxes) som med ”display: flex” lägger sig på bredvid varandra och med ”justify-content: space-between” på det smidigt lägger sig mot kanterna av wrappern och med jämnt avstånd inbördes (CSS-tricks, 2019). Bredden på kolumnerna beräknade jag på samma sätt som Patrik Bernhardsson visar i sin video om responsiv webdesign (2014). Jag använder z-index för att placera allt ovanpå sidhuvudet så att de runda bilderna ska kunna överlappa med negativa margin-tops.
+                <p>
+                    Processanalysen lade jag på en av de andra sidorna och gav den gott om plats för läsa en längre text.</p>
+
+                <h2>Media Queries</h2>
+                <p>
+                    Jag har kodat från desktop-läge och satt media queries för tablets, smartphone samt utskrift. Vad jag läst så verkar det vanligt att tablet-queryn sätts in vid 1024px (gokulkrishh, 2015), men min sida skalade ner fint till ca 900px där jag satte brytpunkten. Där går sidan direkt över till mobilversionen från mockupen, för kolumnerna blev trånga och otympliga att läsa. Med flexbox så kan man ändra ordningen på kolumnerna så att main hamnar först utan att ändra ordningen i html-koden. I header-taggen skiftas uppdelningen mellan barnen från vertikal till horisontell. Så att logotypen hamnar ovanpå navigation och övrig text.</p>
+                <p>
+                    480px är brytpunkten till smartphone-queryn och den är likadant uppbyggd som för tablets, med små storleksjusteringar.</p>
+                <p>
+                    Till print-queryn har jag försökt att anpassa för en mer ekonomisk utskrift (färre sidor) genom att behålla logotypen och en del text från sidhuvudet, men genom position och storlek tar de inte så mycket plats i höjdled.</p>
+
+
+
+
+
+
+                <div class="references">
+                    <h2>Referenser:</h2>
+                    <p>
+                        Bernhardsson, P (2014-08-15) <i>6. CSS 1.</i> [YouTube-video]
+                        Tillgänglig: https://www.youtube.com/watch?list=PLhAmtjlxenRvqX9caQEEpThP_vWUYGx5L&time_continue=284&v=ELDkL6uU0HU . [2019-03-31]</p>
+                    <p>
+                        Bernhardsson, P (2014-05-17) <i>0601 - HTML Grund - Listor: Onumrerade</i>. [YouTube-video]
+                        Tillgänglig: https://www.youtube.com/watch?list=PLhAmtjlxenRsgrPUiAxjzlPZ4RDy34Axp&time_continue=55&v=46Jw9B_qV0A. [2019-03-31]</p>
+                    <p>
+                        CSS-Tricks.com (2019-03-14) <i>A Complete Guide to Flexbox</i> [Elektronisk] Tillgänglig: https://css-tricks.com/snippets/css/a-guide-to-flexbox/. [2019-03-31]</p>
+                    <p>
+                        gokulkrishh (2015-10-28) <i>CSS Media Queries for Desktop, Tablet, Mobile</i>. [Elektronisk] Tillgänglig: https://gist.github.com/gokulkrishh/242e68d1ee94ad05f488. [2019-03-31]</p>
+                    <p>
+                        Meyer, E (u.d.) <i>CSS Tools: Reset CSS</i>. [Elektronisk] Tillgänglig: https://meyerweb.com/eric/tools/css/reset/. [2019-03-31]</p>
+                    <p>
+                        Jacobs, I (2014-28-10) <i>Open Web Platform Milestone Achieved with HTML5 Recommendation</i> [Elektronisk] Tillgänglig: https://www.w3.org/2014/10/html5-rec.html.en. [2019-03-31]</p>
+                    <p>
+                        W3CSchools.org (u.d.) <i>HTML meta Tag</i>. [Elektronisk] Tillgänglig: https://www.w3schools.com/tags/tag_meta.asp. [2019-03-31]</p>
+                </div>
+                <!--.references-->
+        </main>
+        <footer>
+            <img src="./img/footer.png" alt="mountainview2" />
+        </footer>
+    </div>
+    <!--END WRAPPER-->
+</body>
+
+</html>
