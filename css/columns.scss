@@ -1,0 +1,19 @@
+// KOLUMNER
+$container-width: 100%;
+$margin: 1%;
+
+.col-2 {
+    width: $container-width/2;
+}
+
+.col-3 {
+    width: $container-width/3; //  100/3
+}
+
+.col-4 {
+    width: $container-width/4; //  100/4
+}
+
+// $m: 1.6%;
+// $mk: 3;
+// $ekb: (100 - ($m * ($mk - 1))) / $mk;

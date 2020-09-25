@@ -1,3 +1,15 @@
+.col-2 {
+  width: 50%;
+}
+
+.col-3 {
+  width: 33.33333%;
+}
+
+.col-4 {
+  width: 25%;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -11,8 +23,13 @@ body {
   color: #242814;
 }
 
+p {
+  font-family: "Esteban", serif;
+  font-size: 1.5em;
+}
+
 section {
-  margin-bottom: 3em;
+  padding-bottom: 3em 0 3em 0;
 }
 
 a {
@@ -24,29 +41,27 @@ h1 {
   text-transform: uppercase;
 }
 
-header {
+.page-header {
   background-color: #FFCB5B;
   color: #242814;
-  margin-bottom: 3em;
+  padding: 3em 0 3em 0;
+  padding-top: 0;
 }
 
-header .header-container {
+.page-header .header-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
   width: 80%;
-  height: 800px;
+  height: 500px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 1em;
 }
 
-header .header-col {
-  -webkit-box-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
-  margin: 1em;
-}
-
-header .logo {
+.page-header .logo {
   height: 5em;
 }
 
@@ -78,10 +93,6 @@ nav ul a:hover {
   color: #616c36;
 }
 
-nav .row {
-  border: 5px solid #bfbfbf;
-}
-
 nav .row-5 {
   -webkit-box-flex: 5;
       -ms-flex: 5;
@@ -108,21 +119,74 @@ nav .row-1 .arrow-down {
 
 .fullstack-container {
   background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 3em 0 3em 0;
 }
 
 .fullstack-container article {
-  background-color: white;
   width: 80%;
-  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.fullstack-container article .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.fullstack-container article .frontend,
+.fullstack-container article .backend {
+  background-color: #CCCCCC;
+  border: 1px solid #CCCCCC;
+  border-radius: 15px;
+  padding: 1em;
+  margin-top: 1.5em;
+}
+
+.fullstack-container article header {
+  margin-bottom: 1em;
+}
+
+.fullstack-container article .frontend {
+  margin-right: 1em;
+}
+
+.fullstack-container article .backend {
+  margin-left: 1em;
 }
 
 .about-container {
   width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   margin: 0 auto;
+  padding: 3em 0 3em 0;
 }
 
 .about-container p {
-  font-family: "Esteban", serif;
   font-size: 26px;
   margin-bottom: 1em;
 }
@@ -135,10 +199,60 @@ nav .row-1 .arrow-down {
 
 .contact-container {
   background-color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background-color: #242814;
 }
 
-.contact-container aside {
+.contact-container address {
   width: 80%;
-  margin: 0 auto;
+  padding: 3em 0 3em 0;
+  color: #FFCB5B;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-style: normal;
+}
+
+.contact-container address .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.contact-container address p {
+  font-family: "Montserrat", sans-serif;
+  margin-top: 1em;
+  font-size: 1.3em;
+  letter-spacing: .01em;
+}
+
+.contact-container address a {
+  color: #FFCB5B;
+}
+
+.contact-container address .social-media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.contact-container address .social-media img {
+  margin-left: 50px;
+  height: 50px;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -1,18 +1,5 @@
-//COLORS
-$grey-light: #CCCCCC;
-$accent: #FFCB5B;
-$primary: #242814;
-$font-grey: #222222;
-
-//FONT-STACKS
-$sans-font: 'Montserrat',
-sans-serif;
-$serif-font: 'Esteban',
-serif;
-
-$container-width: 80%;
-$bottom-margin: 3em;
-
+@import "variables.scss";
+// @import "columns.scss";
 
 
 //RESET
@@ -29,8 +16,21 @@ body {
     color: $primary;
 }
 
+p {
+    font-family: $serif-font;
+    font-size: 1.5em;
+}
+
+// .container {
+//     display: flex;
+//     flex-direction: column;
+//     justify-content: center;
+//     width: $container-width;
+//     margin: 0 auto;
+// }
+
 section {
-    margin-bottom: $bottom-margin;
+    padding-bottom: $section-padding;
 }
 
 a {
@@ -42,11 +42,12 @@ h1 {
     text-transform: uppercase;
 }
 
-header {
+.page-header {
     background-color: $accent;
     color: $primary;
-    margin-bottom: $bottom-margin;
-    ;
+    padding: $section-padding;
+    padding-top: 0;
+
     // background-image: url(../img/header_bg.jpg);
     // background-size: cover;
     // background-position: center;
@@ -55,18 +56,20 @@ header {
         display: flex;
         margin: 0 auto;
         width: $container-width;
-        height: 800px;
+        height: 500px;
+        justify-content: space-between;
+        padding-top: 1em;
 
         // background-image: url(../img/header_bg.jpg);
         // background-size: cover;
         // background-position: center;
     }
 
-    .header-col {
-        flex: 1;
-        // background-color: #CCCCCC;
-        margin: 1em;
-    }
+    // .header-col {
+    //     flex: 1;
+    //     // background-color: #CCCCCC;
+    //     margin: 1em;
+    // }
 
     .logo {
         height: 5em;
@@ -94,10 +97,6 @@ nav {
         }
     }
 
-    .row {
-        border: 5px solid darken($color: $grey-light, $amount: 5);
-    }
-
     .row-5 {
         flex: 5;
         margin: 0 auto;
@@ -119,21 +118,53 @@ nav {
 
 .fullstack-container {
     background-color: white;
+    display: flex;
+    justify-content: center;
+    padding: $section-padding;
 
     article {
-        background-color: white;
         width: $container-width;
-        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+
+        .row {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+        .frontend,
+        .backend {
+            background-color: $grey-light;
+            border: 1px solid $grey-light;
+            border-radius: 15px;
+            padding: 1em;
+            margin-top: 1.5em;
+        }
+
+        header {
+            margin-bottom: 1em;
+        }
+
+        .frontend {
+            margin-right: 1em;
+        }
+
+        .backend {
+            margin-left: 1em;
+        }
     }
 }
 
 //ABOUT ME
 .about-container {
     width: $container-width;
+    display: flex;
+    flex-direction: column;
     margin: 0 auto;
+    padding: $section-padding;
 
     p {
-        font-family: $serif-font;
         font-size: 26px;
         margin-bottom: 1em;
     }
@@ -148,9 +179,42 @@ nav {
 //CONTACT
 .contact-container {
     background-color: white;
+    display: flex;
+    justify-content: center;
+    background-color: $primary;
 
-    aside {
+    address {
         width: $container-width;
-        margin: 0 auto;
+        padding: $section-padding;
+        color: $accent;
+        display: flex;
+        flex-direction: column;
+        font-style: normal;
+
+        .row {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        p {
+            font-family: $sans-font;
+            margin-top: 1em;
+            font-size: 1.3em;
+            letter-spacing: .01em;
+        }
+
+        a {
+            color: $accent;
+        }
+
+        .social-media {
+            display: flex;
+            justify-content: flex-end;
+
+            img {
+                margin-left: 50px;
+                height: 50px;
+            }
+        }
     }
 }

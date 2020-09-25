@@ -1,0 +1,29 @@
+// Color palette
+$grey-light: #CCCCCC;
+$accent: #FFCB5B;
+$primary: #242814;
+$font-grey: #222222;
+
+//FONT-STACKS
+$sans-font: 'Montserrat',
+sans-serif;
+$serif-font: 'Esteban',
+serif;
+
+
+$container-width: 80%;
+$section-padding:3em 0 3em 0;
+$column-width: 100%;
+
+// Columns
+.col-2 {
+    width: $column-width/2;
+}
+
+.col-3 {
+    width: $column-width/3;
+}
+
+.col-4 {
+    width: $column-width/4;
+}
