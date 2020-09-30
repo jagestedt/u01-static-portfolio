@@ -21,6 +21,7 @@ body {
   background-color: #CCCCCC;
   font-family: "Montserrat", sans-serif;
   color: #242814;
+  font-size: 16px;
 }
 
 p {
@@ -29,7 +30,7 @@ p {
 }
 
 section {
-  padding-bottom: 3em 0 3em 0;
+  padding: 3em 0 3em 0;
 }
 
 a {
@@ -186,6 +187,16 @@ nav .row-1 .arrow-down {
   padding: 3em 0 3em 0;
 }
 
+.about-container .about .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.about-container .about .row .portrait {
+  margin-top: -10em;
+}
+
 .about-container p {
   font-size: 26px;
   margin-bottom: 1em;
@@ -195,6 +206,26 @@ nav .row-1 .arrow-down {
   margin: 0 auto;
   width: 100%;
   height: 800px;
+}
+
+.video {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0 auto;
+  background-color: antiquewhite;
+}
+
+.video iframe {
+  width: 1280px;
+  height: 720px;
 }
 
 .contact-container {
@@ -254,5 +285,62 @@ nav .row-1 .arrow-down {
 .contact-container address .social-media img {
   margin-left: 50px;
   height: 50px;
+}
+
+@media only screen and (max-width: 1000px) {
+  .fullstack-container article .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .fullstack-container article .row .frontend,
+  .fullstack-container article .row .backend {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  [class*="col-"] {
+    width: 100%;
+  }
+  .contact-container address .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .contact-container address .row .social-media {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+  .contact-container address .row .social-media img {
+    margin: 1em 1em 0 0;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  body h1 {
+    font-size: 1.8em;
+  }
+  .page-header .header-container {
+    height: 15vh;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .page-header .header-container .col-3 {
+    width: 50%;
+  }
+  .page-header .header-container .presentation {
+    font-size: .5em;
+  }
+  nav .row-5 {
+    margin-right: 0;
+  }
+  nav .row-5 .menu {
+    font-size: .8em;
+  }
+  .hide {
+    display: none;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

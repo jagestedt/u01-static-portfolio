@@ -14,6 +14,7 @@ body {
     background-color: $grey-light;
     font-family: $sans-font;
     color: $primary;
+    font-size: 16px;
 }
 
 p {
@@ -21,16 +22,8 @@ p {
     font-size: 1.5em;
 }
 
-// .container {
-//     display: flex;
-//     flex-direction: column;
-//     justify-content: center;
-//     width: $container-width;
-//     margin: 0 auto;
-// }
-
 section {
-    padding-bottom: $section-padding;
+    padding: $section-padding;
 }
 
 a {
@@ -164,6 +157,16 @@ nav {
     margin: 0 auto;
     padding: $section-padding;
 
+     .about {
+        .row {
+            display: flex;
+
+            .portrait {
+                margin-top: -10em;
+            }
+        }
+    }
+
     p {
         font-size: 26px;
         margin-bottom: 1em;
@@ -173,6 +176,21 @@ nav {
         margin: 0 auto;
         width: 100%;
         height: 800px;
+    }
+}
+
+.video {
+    display: flex;
+    flex-direction: column;
+    // justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    // text-align: left;
+    background-color: antiquewhite;
+
+    iframe {
+        width: 1280px;
+        height: 720px;
     }
 }
 
@@ -216,5 +234,84 @@ nav {
                 height: 50px;
             }
         }
+    }
+}
+
+// tablets
+@media only screen and (max-width: 1000px) {
+
+    .fullstack-container {
+        article {
+            .row {
+                flex-direction: column;
+
+                .frontend,
+                .backend {
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+
+    [class*="col-"] {
+        width: 100%;
+    }
+
+    .contact-container {
+        address {
+            .row {
+                flex-direction: column;
+
+                .social-media {
+                    // margin-top: 1em;
+                    justify-content: start;
+
+                    img {
+                        margin: 1em 1em 0 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+
+        h1 {
+            font-size: 1.8em;
+        }
+    }
+
+    .page-header {
+
+        .header-container {
+            height: 15vh;
+            flex-wrap: wrap;
+
+            .col-3 {
+                width: 50%;
+            }
+
+            .presentation {
+                font-size: .5em;
+            }
+        }
+    }
+
+    nav {
+
+        .row-5 {
+            margin-right: 0;
+
+            .menu {
+                font-size: .8em;
+            }
+        }
+    }
+
+    .hide {
+        display: none;
     }
 }
