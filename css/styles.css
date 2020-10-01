@@ -38,7 +38,12 @@ a {
 }
 
 h1 {
-  font-size: 60px;
+  font-size: 3.75em;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-size: 3.75em;
   text-transform: uppercase;
 }
 
@@ -84,14 +89,12 @@ nav ul {
 
 nav ul a {
   text-transform: uppercase;
-  letter-spacing: .001em;
   -webkit-transition: all .1s ease-in;
   transition: all .1s ease-in;
 }
 
 nav ul a:hover {
-  letter-spacing: .03em;
-  color: #616c36;
+  color: #b1be7d;
 }
 
 nav .row-5 {
@@ -116,6 +119,10 @@ nav .row-1 {
 
 nav .row-1 .arrow-down {
   height: 1.5em;
+}
+
+nav .col-3 > .welcome {
+  padding: 0;
 }
 
 .fullstack-container {
@@ -194,7 +201,7 @@ nav .row-1 .arrow-down {
 }
 
 .about-container .about .row .portrait {
-  margin-top: -10em;
+  width: 15vw;
 }
 
 .about-container p {
@@ -204,7 +211,7 @@ nav .row-1 .arrow-down {
 
 .about-container .cv {
   margin: 0 auto;
-  width: 100%;
+  width: 80%;
   height: 800px;
 }
 
@@ -224,19 +231,23 @@ nav .row-1 .arrow-down {
 }
 
 .video iframe {
-  width: 1280px;
-  height: 720px;
+  width: 80%;
+  border: 0;
 }
 
 .contact-container {
-  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background-color: #242814;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #242814), to(#050603));
+  background: linear-gradient(180deg, #242814 50%, #050603 100%);
 }
 
 .contact-container address {
@@ -251,6 +262,10 @@ nav .row-1 .arrow-down {
       -ms-flex-direction: column;
           flex-direction: column;
   font-style: normal;
+}
+
+.contact-container address .contact-heading {
+  color: #FFCB5B;
 }
 
 .contact-container address .row {
@@ -319,11 +334,17 @@ nav .row-1 .arrow-down {
 }
 
 @media only screen and (max-width: 800px) {
+  body {
+    font-size: 6px;
+  }
   body h1 {
-    font-size: 1.8em;
+    font-size: 1.5em;
+  }
+  body p {
+    font-size: .7em;
   }
   .page-header .header-container {
-    height: 15vh;
+    height: 80vh;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   }

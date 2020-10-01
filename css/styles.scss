@@ -31,7 +31,11 @@ a {
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 3.75em;
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 3.75em;
     text-transform: uppercase;
 }
 
@@ -52,17 +56,7 @@ h1 {
         height: 500px;
         justify-content: space-between;
         padding-top: 1em;
-
-        // background-image: url(../img/header_bg.jpg);
-        // background-size: cover;
-        // background-position: center;
     }
-
-    // .header-col {
-    //     flex: 1;
-    //     // background-color: #CCCCCC;
-    //     margin: 1em;
-    // }
 
     .logo {
         height: 5em;
@@ -80,12 +74,10 @@ nav {
 
         a {
             text-transform: uppercase;
-            letter-spacing: .001em;
             transition: all .1s ease-in;
 
             &:hover {
-                letter-spacing: .03em;
-                color: lighten($color: $primary, $amount: 20);
+                color: lighten($color: $primary, $amount: 50);
             }
         }
     }
@@ -105,10 +97,13 @@ nav {
             height: 1.5em;
         }
     }
+
+    .col-3 > .welcome {
+        padding: 0;
+    }
 }
 
 //FULLSTACK
-
 .fullstack-container {
     background-color: white;
     display: flex;
@@ -162,7 +157,7 @@ nav {
             display: flex;
 
             .portrait {
-                margin-top: -10em;
+                width: 15vw;
             }
         }
     }
@@ -174,7 +169,7 @@ nav {
 
     .cv {
         margin: 0 auto;
-        width: 100%;
+        width: 80%;
         height: 800px;
     }
 }
@@ -189,17 +184,19 @@ nav {
     background-color: antiquewhite;
 
     iframe {
-        width: 1280px;
-        height: 720px;
+        width: 80%;
+        // height: 720px;
+        border: 0;
     }
 }
 
 //CONTACT
 .contact-container {
-    background-color: white;
+    // background-color: white;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    background-color: $primary;
+    background: linear-gradient(180deg, $primary 50%, darken($primary, 10) 100%);
 
     address {
         width: $container-width;
@@ -208,6 +205,10 @@ nav {
         display: flex;
         flex-direction: column;
         font-style: normal;
+
+        .contact-heading {
+            color: $accent;
+        }
 
         .row {
             display: flex;
@@ -278,16 +279,21 @@ nav {
 
 @media only screen and (max-width: 800px) {
     body {
+        font-size: 6px;
 
         h1 {
-            font-size: 1.8em;
+            font-size: 1.5em;
+        }
+
+        p {
+            font-size: .7em;
         }
     }
 
     .page-header {
 
         .header-container {
-            height: 15vh;
+            height: 80vh;
             flex-wrap: wrap;
 
             .col-3 {
