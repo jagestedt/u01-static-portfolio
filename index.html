@@ -1,118 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Samuel Jägestedt | u01</title>
     <link rel="stylesheet" href="/css/styles.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Esteban&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
-</head>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Esteban&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./js/main.js" defer></script>
+  </head>
 
-<body>
+  <body>
     <header class="page-header">
-        <div class="header-container">
-            <div class="brand col-3">
-                <img class="logo" src="/img/J.logo.svg" alt="jagestedt.com" tabindex="1" />
-            </div>
-            <nav class="menu col-3">
-                <div class="row-5">
-                    <ul class="nav-menu">
-                        <li><a href="#" tabindex="2">Home</a></li>
-                        <li><a href="#about" tabindex="3">About me</a></li>
-                        <li><a href="#fullstack" tabindex="4">Fullstack</a></li>
-                        <li><a href="#contact" tabindex="5">Contact</a></li>
-                    </ul>
-                </div>
-            </nav>
-            <section class="col-3 welcome" tabindex="6">
-                <h1>Hello, I'm Samuel</h1>
-                <p class="lead">and i'm a full stack web developer under development at Chas Academy in Stockholm, Sweden.</p>
-            </section>
+      <div class="header-container">
+        <div class="brand col-3">
+          <a href="/">
+            <img class="logo" src="/img/J.logo.svg" alt="jagestedt.com" />
+          </a>
         </div>
+        <nav class="menu col-3">
+          <div class="row-5">
+            <ul class="nav-menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#about">About me</a></li>
+              <li><a href="#fullstack">Fullstack</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+        <section class="col-3 welcome">
+          <h1>Hello, I'm Samuel</h1>
+          <p class="lead">
+            and i'm a full stack web developer under development at Chas Academy
+            in Stockholm, Sweden.
+          </p>
+        </section>
+      </div>
     </header>
-    <div class="about-container" tabindex="7">
-        <main id="about" class="about">
-            <div class="row">
-                <article class="about-me-text col">
-                    <h2>About me</h2>
-                    <p>
-                        Save whilome low he but his, flash done and break few, save sun not can rhyme such and longdeserted flow however, to mirth ee resolved for ever for to. Fly would wins adieu most woe
-                        there. Was in can ah concubines concubines, woe mighty een happy of heal, his to he was the, was mother he flee birth been. Knew.
-                    </p>
-                    <p>
-                        Him not visit would soon night sad but his fondly. Did of far wight none and to. His of his but maidens shameless to only, her high rake friends bower now, that had wins feud rill the,
-                        minstrels it so thy have, fabled loved and vast he to none within.
-                    </p>
-                </article>
-                <aside class="col">
-                    <img src="/img/portrait.png" alt="" class="portrait of Samuel Jägestedt" />
-                </aside>
-            </div>
-            <div class="pdf-container">
-                <embed class="cv" tabindex="8" src="/content/CV.pdf#view=FitH&toolbar=0&statusbar=0&messages=0&navpanes=0&scrollbar=0" type="text/pdf" />
-            </div>
-        </main>
+    <div class="about-container">
+      <main id="about" class="about">
+        <div class="row">
+          <article class="about-me-text col">
+            <h2>About me</h2>
+            <p>
+              I got into web development via my interest in design. Writing web
+              applications is a creative process with a lot of problem solving
+              and in a industry that is constantly evolving, the learning never
+              stops.
+            </p>
+            <p>
+              I want to build good looking applications with the user experience
+              in focus. I wanna find ways to break design conventions without
+              sacrificing usability
+            </p>
+          </article>
+          <aside class="col">
+            <img
+              src="/img/portrait.png"
+              alt=""
+              class="portrait of Samuel Jägestedt"
+            />
+          </aside>
+        </div>
+      </main>
     </div>
-    <!-- END about-container -->
+
     <div id="fullstack" class="fullstack-container">
-        <article>
-            <header class="section-header">
-                <h2 tabindex="9">Fullstack, what?</h2>
-                <p class="lead" tabindex="10">- it's the best of two ends, in one developer</p>
+      <article>
+        <header class="section-header">
+          <h2>Fullstack</h2>
+          <p class="lead">
+            - it's a little bit of this, and little bit of that
+          </p>
+        </header>
+        <div class="row">
+          <section class="frontend col-2">
+            <header class="col-header">
+              <h3>Front-end</h3>
             </header>
-            <div class="row">
-                <section class="frontend col-2">
-                    <header class="col-header">
-                        <h3 tabindex="11">Front-end</h3>
-                    </header>
-                    <p tabindex="12">
-                        Everything that the user sees in the browser is defined by the front-end code. The front-end is the user interface, consisting of texts, images, buttons and much more. Without front-end
-                        the user would have no way to interact with your application. Furthermore, you need solid front-end for Search Engine Optimization. There are three primary tools for the front-end
-                        developer: HTML, CSS and JavaScript.
-                    </p>
-                </section>
-                <section class="backend col-2">
-                    <header class="col-header">
-                        <h3 tabindex="13">Back-end</h3>
-                    </header>
-                    <p tabindex="14">
-                        To make your page reach the next-level, it needs to be dynamic. This is where you need back-end. Back-end is not visible to the user, because the code is run on the server. This allows
-                        us to store and organize data using a wide array of programming languages. These include: PHP, C#, Python, Ruby and in recent years even JavaScript.
-                    </p>
-                </section>
-            </div>
-            <!-- END row -->
-        </article>
+            <p>
+              Everything that the user sees in the browser is defined by the
+              front-end code. The front-end is the user interface, consisting of
+              texts, images, buttons and much more. Without front-end the user
+              would have no way to interact with your application. Furthermore,
+              you need solid front-end for Search Engine Optimization. There are
+              three primary tools for the front-end developer: HTML, CSS and
+              JavaScript.
+            </p>
+          </section>
+          <section class="backend col-2">
+            <header class="col-header">
+              <h3>Back-end</h3>
+            </header>
+            <p>
+              To make your page reach the next-level, it needs to be dynamic.
+              This is where you need back-end. Back-end is not visible to the
+              user, because the code is run on the server. This allows us to
+              store and organize data using a wide array of programming
+              languages. These include: PHP, C#, Python, Ruby and in recent
+              years even JavaScript.
+            </p>
+          </section>
+        </div>
+        <!-- END row -->
+      </article>
     </div>
     <!--END fullstack-->
-    <section class="video-section">
-        <h2 tabindex="15">Gallery</h2>
-        <div class="video-container">
-            <iframe tabindex="16" class="video" src="https://www.youtube.com/embed/LIizcjcRMzY" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen aria-label="Video by Connor MacDonald with music and graphics dictated by the rotation ratios of planets within the Trappist - 1 system.">
-            </iframe>
+    <footer class="contact-container">
+      <h2 class="contact-heading">Contact</h2>
+      <address id="contact">
+        <div class="row">
+          <div>
+            <p>
+              Mail me at: <br /><a
+                href="mailto:samuel.jagestedt@gmail.com?subject=Let's&nbsp;work&nbsp;together!"
+                >samuel.jagestedt@gmail.com</a
+              >
+            </p>
+          </div>
+          <div>
+            <p>or call: <br /><a href="tel:+46761337755">+46 761 337 755</a></p>
+          </div>
+          <div class="social-media">
+            <a
+              href="https://www.linkedin.com/in/samuel-j%C3%A4gestedt-912124188/"
+              ><img src="/img/iconfinder_linkedin.png" alt="my linkedin"
+            /></a>
+            <a href="https://www.instagram.com/ichbinjaeger/"
+              ><img src="/img/iconfinder_instagram.png" alt="my instagram"
+            /></a>
+          </div>
         </div>
-    </section>
-    <!--END video-container-->
-
-    <footer class="contact-container" tabindex="17">
-        <h2 class="contact-heading">Contact</h2>
-        <address id="contact">
-            <div class="row">
-                <div>
-                    <p tabindex="18">Mail me at: <br /><a href="mailto:samuel.jagestedt@gmail.com?subject=Let's&nbsp;work&nbsp;together!">samuel.jagestedt@gmail.com</a></p>
-                </div>
-                <div>
-                    <p tabindex="19">or call: <br /><a href="tel:+46761337755">+46 761 337 755</a></p>
-                </div>
-                <div class="social-media">
-                    <a href="https://www.twitter.com/ichbinjaeger" tabindex="20"><img src="/img/iconfinder_twitter.png" alt="my twitter" /></a>
-                    <a href="https://www.linkedin.com/in/samuel-j%C3%A4gestedt-912124188/" tabindex="21"><img src="/img/iconfinder_linkedin.png" alt="my linkedin" /></a>
-                    <a href="https://www.instagram.com/ichbinjaeger/" tabindex="22"><img src="/img/iconfinder_instagram.png" alt="my instagram" /></a>
-                </div>
-            </div>
-        </address>
+      </address>
     </footer>
-</body>
-
+  </body>
 </html>
